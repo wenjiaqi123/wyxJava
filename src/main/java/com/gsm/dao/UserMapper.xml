@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gsm.dao.UserDao">
+
+    <!--修改用户信息-->
+    <update id="updateUserInfo" parameterType="UserDo">
+        update sys_user
+        set user_nick_name = #{userNickName},
+            <if test="userPwdPlaintext!=null and ''!=userPwdPlaintext">
+                user_pwd_plaintext = #{userPwdPlaintext},
+            </if>
+            <if test="userPwdCiphertext!=null and ''!=userPwdCiphertext">
+                user_pwd_ciphertext = #{userPwdCiphertext},
+            </if>
+            user_email = #{userEmail}
+        where status = 1 and id = #{id}
+    </update>
+
+    <!--获取用户信息-->
+    <select id="selectUserInfo" parameterType="Long" resultType="UserInfo">
+        select  t.id,
+                t.user_name,
+                t.user_nick_name,
+                t.iphone_no,
+                t.user_email
+        from sys_user t
+        where t.status = 1
+        and t.id = #{id}
+    </select>
+</mapper>
