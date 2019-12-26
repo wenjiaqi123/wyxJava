@@ -8,4 +8,6 @@ import java.util.List;
 public interface CourseDao {
 
     List<CourseVo> selectCourseList(CourseDo courseDo);
+
+    void insert(List<CourseDo> list);
 }
