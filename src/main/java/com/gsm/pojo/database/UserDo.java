@@ -31,6 +31,8 @@ public class UserDo {
   private String iphoneNo;
   @ApiModelProperty("邮箱")
   private String userEmail;
+  @ApiModelProperty("头像")
+  private String headPortrait;
 
   @ApiModelProperty("创建时间")
   private Date createDate;
