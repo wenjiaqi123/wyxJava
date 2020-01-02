@@ -23,4 +23,6 @@ public class UserInfo {
     private String iphoneNo;
     @ApiModelProperty("邮箱")
     private String userEmail;
+    @ApiModelProperty("头像")
+    private String headPortrait;
 }
