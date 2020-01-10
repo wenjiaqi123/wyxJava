@@ -14,7 +14,8 @@
             <if test="userPwdCiphertext!=null and ''!=userPwdCiphertext">
                 user_pwd_ciphertext = #{userPwdCiphertext},
             </if>
-            user_email = #{userEmail}
+            user_email = #{userEmail},
+            head_portrait = #{headPortrait}
         where status = 1 and id = #{id}
     </update>
 
@@ -24,7 +25,8 @@
                 t.user_name,
                 t.user_nick_name,
                 t.iphone_no,
-                t.user_email
+                t.user_email,
+                t.head_portrait
         from sys_user t
         where t.status = 1
         and t.id = #{id}

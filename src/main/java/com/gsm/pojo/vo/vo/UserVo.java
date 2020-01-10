@@ -19,6 +19,8 @@ public class UserVo {
     private String userNickName;
     @ApiModelProperty("邮箱")
     private String userEmail;
+    @ApiModelProperty("头像")
+    private String headPortrait;
     @ApiModelProperty("用户密码明文,userPwdPlaintext")
     private String pp;
     @ApiModelProperty("用户密码密文,userPwdCiphertext")

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gsm.dao.EvaluateDao">
+
+    <!--查询课程信息-->
+    <select id="insertEvaluate" parameterType="CourseEvaluateDo">
+        insert into course_evaluate
+        (course_id,
+        user_id,
+        course_score,
+        course_evaluate)
+        values
+        (#{courseId},
+        #{userId},
+        #{courseScore},
+        #{courseEvaluate})
+    </select>
+</mapper>

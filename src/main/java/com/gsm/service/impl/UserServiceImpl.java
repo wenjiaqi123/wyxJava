@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserService {
         String pp = userVo.getPp();
         String pc = userVo.getPc();
         String userEmail = userVo.getUserEmail();
+        String headPortrait = userVo.getHeadPortrait();
 
         String userPwd = CryptogramUtils.base64Decode(pp);
         UserDo userDo = UserDo.builder()
@@ -32,6 +33,7 @@ public class UserServiceImpl implements UserService {
                 .userPwdPlaintext(userPwd)
                 .userPwdCiphertext(pc)
                 .userEmail(userEmail)
+                .headPortrait(headPortrait)
                 .build();
         Integer count = userDao.updateUserInfo(userDo);
         BoolVo boolVo = new BoolVo(true, "修改成功");

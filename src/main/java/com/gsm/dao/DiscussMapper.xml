@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gsm.dao.DiscussDao">
+
+    <!--查询课程信息-->
+    <select id="insertDiscuss" parameterType="CourseDiscussDo">
+        insert into course_discuss
+        (course_id,
+        user_id,
+        course_discuss)
+        values
+        (#{courseId},
+        #{userId},
+        #{courseDiscuss})
+    </select>
+</mapper>
