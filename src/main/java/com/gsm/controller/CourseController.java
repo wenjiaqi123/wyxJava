@@ -23,7 +23,7 @@ public class CourseController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "page", value = "页码", required = true),
             @ApiImplicitParam(paramType = "query", name = "rows", value = "每页记录数", required = true),
-            @ApiImplicitParam(paramType = "query", name = "courseType", value = "课程类型", required = true)
+            @ApiImplicitParam(paramType = "query", name = "subjectId", value = "课程类型", required = true)
     })
     @GetMapping("/courseList")
     public ListVo selectCourseList(CourseDo courseDo){

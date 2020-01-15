@@ -8,11 +8,11 @@
     <select id="selectCourseList" parameterType="CourseDo" resultType="CourseVo">
         select t.id,
                t.course_name,
+               t.subject_id,
                t.course_time,
                t.course_size,
-               t.show_order,
-               t.course_type
+               t.show_order
         from course_details t
-        where t.course_type = #{courseType}
+        where t.subject_id = #{subjectId}
     </select>
 </mapper>
